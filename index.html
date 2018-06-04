@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Lotka Volterra Equations</title>
+    <meta charset = "utf-8">
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity = "sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin = "anonymous">
+
+    <script src = "https://d3js.org/d3.v4.js"></script>
+    <script src = "https://rawgit.com/nstrayer/slid3r/master/dist/slid3r.js"></script>
+
+    <link href = "https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href = "https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+    <link href = "style.css" rel = "stylesheet">
+
+</head>
+
+<body>
+    <div class = "jumbotron jumbotron fluid" id = "heading">
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-7 text-center">
+                <h1> Lotka Volterra Equations</h1>
+            </div>
+        </div>
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-7 text-center">
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <div class = "jumbotron jumbotron fluid">
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-7">
+                <p id = "prompt">Wait, what?<br>Let’s start from the beginning…</p>
+            </div>
+        </div>
+
+        <div class = "spacer">
+        </div>
+
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-3 text-center">
+                <img src = "Images/lotka.jpg" alt = "Image of Alfred Lotka">
+            </div>
+            <div class = "offset-md-1">
+            </div>
+            <div class = "col-md-3 text-center">
+                <img src = "Images/volterra.jpg" alt = "Image of Vito Volterra">
+            </div>
+        </div>
+
+        <div class = "spacer">
+        </div>
+
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-3">
+                <p>Alfred James Lotka was an American bio-mathematician and bio-statistician, who sought to apply the principles of physical sciences to biological sciences.</p>
+            </div>
+            <div class = "offset-md-1">
+            </div>
+            <div class = "col-md-3">
+                <p>Vito Volterra was an Italian mathematician and physicist, known for his contributions to mathematical biology and integral equations.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class = "jumbotron jumbotron fluid">
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-7">
+                <p id = "prompt">Now, with the name of those equations you would think that these two scientists collaborated to work on something,<br>but that’s not what happened…</p>
+            </div>
+        </div>
+
+        <div class = "spacer">
+        </div>
+
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-7">
+                <p>Lotka initially started working on these equations in 1910. In 1920, he extended his model to ‘organic systems’, and in 1925 he utilized this model to analyze predator-prey interactions in his book on biomathematics. The same set of equations were published by Volterra in 1926. His work was inspired by his interactions with a marine biologist.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class = "jumbotron jumbotron fluid">
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-7">
+                <p id = "prompt">Thanks for the history lesson, but what are these equations exactly?<br>Well, I am glad you asked!</p>
+            </div>
+        </div>
+
+        <div class = "spacer">
+        </div>
+
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-7">
+                <p>
+                    The Lotka Volterra equations describe an ecological predator prey model for : <br>
+                    <i>x</i> &rarr; prey population <br>
+                    <i>y</i> &rarr; predator population
+                </p>
+                <p>
+                    which assumes that, for a set of fixed positive constants: <br>
+                    &alpha; &rarr; the growth rate of prey <br>
+                    &beta; &rarr; the rate at which predators destroy prey <br>
+                    &gamma; &rarr; the death rate of predators <br>
+                    &delta; &rarr; the rate at which predators increase by consuming prey
+                </p>
+                <p>The following equations hold true:</p>
+            </div>
+        </div>
+
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-2">
+                <span>
+                    <u><i>dx</i></u>
+                    &nbsp; = &nbsp;
+                    &alpha;<i>x</i> &minus; &beta;<i>x</i><i>y</i>
+                </span>
+                <br>
+                <span>
+                    <i>dt</i>
+                </span>
+            </div>
+            <div class = "col-md-2">
+                <span>
+                    <u><i>dy</i></u>
+                    &nbsp; = &nbsp;
+                    &delta;<i>x</i><i>y</i> &minus; &gamma;<i>y</i>
+                </span>
+                <br>
+                <span>
+                    <i>dt</i>
+                </span>
+            </div>
+            <div class = "offset-md-3">
+            </div>
+        </div>
+    </div>
+
+    <div class = "jumbotron jumbotron fluid">
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-7">
+                <p id = "prompt">Now that’s a whole bunch of mathematics I’ll never understand…<br>And you don’t need to.</p>
+            </div>
+        </div>
+
+        <div class = "spacer">
+        </div>
+
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-7">
+                <p>Consider the graph below, it depicts the relationship between the populations of Canadian lynx and snowshoe hare from North American forests. In this case, the Canadian lynx is the predator and snowshoe hare is the prey.</p>
+                <p>From this graph, we can infer that the population of Canadian lynx increased as the population of snowshoe hare rose. Similarly, the population of Canadian lynx dropped when the population of snowshoe hair decreased. It clearly states that the population of the two species is inter-dependent on each other.</p>
+            </div>
+        </div>
+
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-6 text-center" id = "case-study-div">
+                <img src = "Images/case-study.jpg" alt = "Image depicting population trends of Canadian lynx and snowshoe hare" id = "case-study">
+            </div>
+        </div>
+
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-7">
+                <p>This cycle of predator and prey lasts approximately 10 years, with the predator population lagging 1–2 years behind that of the prey population. As the population of prey grows, the predators can hunt more, hence the population of predators increases as well. When the population of predators reaches a threshold level, they kill a lot of prey, and thus the population of prey starts to decrease. This is followed by a decline in the predator population because of scarcity of food. When the predator population is low, the prey population starts to increase due, at least in part, to low predator pressure, starting the cycle anew.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class = "jumbotron jumbotron fluid">
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-7">
+                <p id = "prompt">Let’s try to visualize the predator-prey cycles.</p>
+            </div>
+        </div>
+
+        <div class = "spacer">
+        </div>
+
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-7">
+                <p>Consider the scenario of fox versus rabbit. Here, fox is the predator and rabbit is the prey. Play with the sliders, to change the parameters of their relation, and see how the two populations are affected by each other. <i>The values of the sliders below, are optimized for obtaining better graphs, with an initial rabbit population of 35 and initial fox population of 50.</i></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class = "d-flex justify-content-center">
+        <div class = "col-sm-7">
+            <table class = "table table-responsive table-bordered">
+                <tbody>
+                    <tr>
+                        <td style = "width:60%">Growth rate of rabbits</td>
+                        <td style = "width:30%"><input type = "range" min = "1" max = "9" id = "slider-a" class = "sliders"></td>
+                        <td style = "width:10%"><span id = "value-a">0.5</span></td>
+                    </tr>
+                    <tr>
+                        <td>Rate at which foxes kill rabbits</td>
+                        <td><input type = "range" min = "1" max = "9" id = "slider-b" class = "sliders"></td>
+                        <td><span id = "value-b">0.05</span></td>
+                    </tr>
+                    <tr>
+                        <td>Death rate of foxes</td>
+                        <td><input type = "range" min = "1" max = "9" id = "slider-c" class = "sliders"></td>
+                        <td><span id = "value-c">0.5</span></td>
+                    </tr>
+                    <tr>
+                        <td>Rate at which fox population grows by consuming rabbits</td>
+                        <td><input type = "range" min = "1" max = "9" id = "slider-d" class = "sliders"></td>
+                        <td><span id = "value-d">0.05</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class = "jumbotron jumbotron fluid p-0">
+        <div class = "d-flex justify-content-center text-center p-0">
+            <button type = "button" class = "btn btn-default" onclick = "drawGraphs()">Draw Population Graphs</button>
+        </div>
+    </div>
+
+    <div class = "jumbotron jumbotron fluid p-0">
+        <div class = "d-flex justify-content-center text-center p-0" id = "visualisation">
+        </div>
+    </div>
+
+    <script src = "script.js" charset = "utf-8"></script>
+
+    <div class = "jumbotron jumbotron fluid">
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-7">
+                <p id = "prompt">There you have it. Hope the concept is more clear now!</p>
+            </div>
+        </div>
+
+        <div class = "spacer">
+        </div>
+
+        <div class = "d-flex justify-content-center">
+            <div class = "col-md-7">
+                <p>Sources :</p>
+                <ul>
+                    <li><a href = "https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations">Lotka–Volterra equations</a></li>
+                    <li><a href = "https://en.wikipedia.org/wiki/Alfred_J._Lotka">Alfred J. Lotka</a></li>
+                    <li><a href = "https://en.wikipedia.org/wiki/Vito_Volterra">Vito Volterra</a></li>
+                    <li><a href = "http://mathworld.wolfram.com/Lotka-VolterraEquations.html">Lotka-Volterra Equations</a></li>
+                    <li><a href = "https://qa.cnx.org/contents/2sMTp7KD@2/Community-Ecology">Community Ecology</a></li>
+                    <li><a href = "https://pastebin.com/QYWkRRxD">Lotka-Volterra C++</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>

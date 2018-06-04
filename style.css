@@ -1,0 +1,129 @@
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 17px;
+    color: #4c4742;
+    background-color: #fcf7f2;
+}
+
+.spacer {
+    height: 2rem;
+}
+
+.jumbotron {
+    background-color: #ffffff;
+    padding-bottom: 0rem;
+    background-color: #fcf7f2;
+}
+
+h1 {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+hr {
+    border-top: 0.08rem solid #4c4742;
+}
+
+#prompt {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    color: #009991;
+}
+
+#fraction {
+    border-bottom: 0.1rem solid #4c4742;
+    border
+}
+
+#case-study-div {
+    background-color: #ffffff;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    border: 0.15rem solid #4c4742;
+}
+
+#case-study {
+    width: 80%;
+    height: auto;
+}
+
+u {
+  padding-bottom: 1px;
+  text-decoration: none;
+  border-bottom: 0.1rem solid #4c4742;
+}
+
+table {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+table tr {
+    padding: 0rem;
+}
+
+table.table-bordered {
+    border: 0px solid #fcf7f2;
+}
+
+table.table-bordered > tbody > tr > td {
+    border: 2px solid #fcf7f2;
+}
+
+input {
+    width: 225px;
+}
+
+.legend {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#visualisation {
+    padding: 0rem;
+}
+
+.btn {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fcf7f2;
+    background-color: #4c4742;
+    border-radius: 0px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+
+.axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.grid line {
+    stroke: #d3d3d3;
+}
+
+.tick text {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+}
+
+.axestext {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}
